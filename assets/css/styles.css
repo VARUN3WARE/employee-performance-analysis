@@ -1,0 +1,287 @@
+/* Modern reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #1a4f8a;
+  --primary-dark: #0c3b6f;
+  --primary-light: #e9f0f9;
+  --accent: #3498db;
+  --text: #2c3e50;
+  --text-light: #7f8c8d;
+  --bg: #f9fafb;
+  --white: #ffffff;
+  --border: #e2e8f0;
+  --success: #27ae60;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+/* Header with modern styling */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  padding: 2.5rem 0;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Fixed navigation with subtle shadow */
+nav {
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: var(--primary);
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+nav a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Main container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Section styling with improved spacing */
+section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 50px;
+  background-color: var(--accent);
+}
+
+section h3 {
+  color: var(--primary);
+  margin: 1.5rem 0 1rem 0;
+  font-size: 1.3rem;
+}
+
+section p, section li {
+  margin-bottom: 1rem;
+  text-align: justify;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Enhanced story section */
+.story-section {
+  background: var(--primary-light);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
+}
+
+.story-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.story-section img:hover {
+  transform: scale(1.01);
+}
+
+.story-caption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+/* Card layout for visualizations */
+.visualization-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.visualization-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Modern footer */
+footer {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 0;
+  position: relative;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+  }
+  
+  .container {
+    padding: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  nav a {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Print styles */
+@media print {
+  nav, footer {
+    display: none;
+  }
+  
+  .container {
+    box-shadow: none;
+    max-width: 100%;
+  }
+  
+  .story-section {
+    background: none;
+    box-shadow: none;
+  }
+}
